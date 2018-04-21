@@ -1,5 +1,6 @@
 from bot import app
 
+from os import environ
 import json
 import requests
 from flask import request
@@ -17,7 +18,7 @@ def new_message_handler():
     }
 
     print("Replying with standard response to user with chat_id ", chat_id)
-    resp = requests.post(config["bot_base_url"] + config["bot_access_token"] + "/sendMessage", payload)
+    resp = requests.post(environ.get("bot_base_url") + "/sendMessage", payload)
     print(resp)
     return "Request received"
 
