@@ -1,9 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
-codechef_url = "https://www.codechef.com/contests"
-
-def codechef_scraper() :
+def Codechef_scraper() :
+    codechef_url = "https://www.codechef.com/contests"
     resp = requests.get(codechef_url).content
     soup = BeautifulSoup(resp, "lxml")
 
