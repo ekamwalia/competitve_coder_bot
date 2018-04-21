@@ -1,5 +1,5 @@
 from bot import app
-
+from codechef import codechef_scraper
 from os import environ
 import json
 import requests
@@ -11,15 +11,13 @@ def new_message_handler():
     update_json = request.get_json()
 
     chat_id = update_json["message"]["chat"]["id"]
+    codechef_contests = codechef_scraper()
     payload = {
         "chat_id": chat_id,
-        "text": "Hello from the Coder Bot, " + update_json["message"]["chat"]["username"]
-                + "This is in response to your message"
+        "text": codechef_contests
     }
 
-    print("Replying with standard response to user with chat_id ", chat_id)
     resp = requests.post(environ.get("bot_base_url") + "/sendMessage", payload)
-    print(resp)
     return "Request received"
 
 
