@@ -21,7 +21,7 @@ def Codechef_scraper() :
         contests_list += "From: " + contest_details[2].text + "\n"
         contests_list += "To: " + contest_details[3].text + "\n\n"
 
-    future_contests_body = tables[0].find("tbody")
+    future_contests_body = tables[1].find("tbody")
     future_contests = future_contests_body.find_all("tr")
 
     contests_list += "\nFUTURE CONTESTS\n\n"
