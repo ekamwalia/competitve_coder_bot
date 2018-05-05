@@ -23,9 +23,9 @@ def hackerrank_scraper():
         time_meta = contest_details[1].find('meta', {"itemprop": "startDate"})
         time_comp = parse(time_meta['content']).isoformat(' ')
         time = time_comp.split('+')[0]
-        contests_string += "From: " + time + "\n\n"
+        contests_string += "From: " + time + "\n"
 
-        # Get
+        # # Get startTime from meta tag and then parse ISO 8601
         time_meta = contest_details[1].find('meta', {"itemprop": "endDate"})
         time_comp = parse(time_meta['content']).isoformat(' ')
         time = time_comp.split('+')[0]
