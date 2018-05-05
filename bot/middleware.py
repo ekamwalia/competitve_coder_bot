@@ -6,12 +6,12 @@ import string
 def switch(message):
     arguements = message.split(' ')
     arg_count = len(arguements)
-    command = string.lower(arguements[0])
+    command = arguements[0].lower()
     response = ''
 
     if command == 'codechef' and arg_count == 1:
         response = codechef_scraper()
-    elif command == 'codechef' and arg_count == 1:
+    elif command == 'hackerrank' and arg_count == 1:
         response = hackerrank_scraper()
     else:
         response = "Invalid command"
