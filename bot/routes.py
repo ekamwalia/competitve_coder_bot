@@ -1,7 +1,6 @@
 from bot import app
-from bot.codechef import codechef_scraper
+from bot.middleware import switch
 from os import environ
-import json
 import requests
 from flask import request
 
@@ -12,7 +11,7 @@ def new_message_handler():
 
     chat_id = update_json["message"]["chat"]["id"]
     print(update_json)
-    payload_text = switch()
+    payload_text = switch(update_json["message"]["text"])
     payload = {
         "chat_id": chat_id,
         "text": payload_text
