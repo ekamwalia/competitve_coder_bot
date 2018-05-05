@@ -24,8 +24,4 @@ def hackerrank_scraper() :
         time = time_comp.split('+')[0]
         contests_string += time + "\n\n"
 
-    print(contests_string)
-
-
-if __name__ == "__main__":
-    hackerrank_scraper()
+    return contests_string
