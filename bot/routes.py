@@ -1,5 +1,5 @@
 from bot import app
-from bot.codechef import Codechef_scraper
+from bot.codechef import codechef_scraper
 from os import environ
 import json
 import requests
@@ -11,10 +11,11 @@ def new_message_handler():
     update_json = request.get_json()
 
     chat_id = update_json["message"]["chat"]["id"]
-    codechef_contests = Codechef_scraper()
+    print(update_json)
+    payload_text = switch()
     payload = {
         "chat_id": chat_id,
-        "text": codechef_contests
+        "text": payload_text
     }
 
     resp = requests.post(environ.get("bot_base_url") + "/sendMessage", payload)
@@ -23,5 +24,4 @@ def new_message_handler():
 
 @app.route("/")
 def hello():
-    codechef_list = Codechef_scraper()
-    return codechef_list
+    return "GET / works"
