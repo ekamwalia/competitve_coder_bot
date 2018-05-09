@@ -37,8 +37,12 @@ def codechef_contest() :
 
 def codechef_user(username):
     codechef_url = "https://www.codechef.com/users/" + username
-    resp = requests.get(codechef_url).content
-    soup = BeautifulSoup(resp, "lxml")
+    resp = requests.get(codechef_url)
+
+    if resp.status_code != 200:
+        return "User Not Found"
+
+    soup = BeautifulSoup(resp.content, "lxml")
 
     user_profile = "Username: " + username
 
@@ -63,8 +67,6 @@ def codechef_user(username):
     return user_profile
 
 
-if __name__ == "__main__":
-    print(codechef_user("ekamwalia7"))
 
 
 
