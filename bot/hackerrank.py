@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from dateutil.parser import parse
 
 
-def hackerrank_scraper():
+def hackerrank_contest():
     hackerrank_url = "https://www.hackerrank.com/contests"
     resp = requests.get(hackerrank_url)
     soup = BeautifulSoup(resp.content, "lxml")
