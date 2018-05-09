@@ -62,14 +62,18 @@ def codechef_user(username):
     rating = rating_div.text
     user_profile += "\nOverall Rating: " + rating
 
-    user_profile += "\n"
+    # Get user's Global and Country Rank
+    sidebar = soup.find('div', {"class": "rating-ranks"})
+    a_list = sidebar.find_all('a')
+    user_profile += "\nGlobal Rank: " + a_list[0].strong.text
+    user_profile += "\nCountry Rank: " + a_list[1].strong.text
 
+    user_profile += "\n"
     return user_profile
 
 
-
-
-
+if __name__ == "__main__":
+    print(codechef_user("ekamwalia7"))
 
 
 
