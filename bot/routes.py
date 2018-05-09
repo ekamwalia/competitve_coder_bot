@@ -8,9 +8,9 @@ from flask import request
 @app.route("/newMessage", methods=['POST', 'GET'])
 def new_message_handler():
     update_json = request.get_json()
+    print(update_json)
 
     chat_id = update_json["message"]["chat"]["id"]
-    print(update_json)
     payload_text = switch(update_json["message"]["text"])
     payload = {
         "chat_id": chat_id,
