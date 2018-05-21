@@ -29,9 +29,4 @@ def switch(message):
 
 
 def start_message():
-    return '''Greetings from Competitve Coder Bot! <br> 
-              You can use one of the quick commands to view
-              the upcoming contests on a platform. <br> 
-              You can also text me with the name of a platform 
-              and a username to view a user's profile 
-           '''
+    return "Greetings from Competitve Coder Bot!\nYou can use one of the quick commands to view the upcoming contests on a platform.\nYou can also text me with the name of a platform and a username to view a user's profile."
