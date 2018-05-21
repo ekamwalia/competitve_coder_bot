@@ -22,15 +22,15 @@ This section describes the commands and parameters to use various features of th
 ## TODOS
 This section contains all the ideas and features I am currently working on adding
 ### Functionality
-- [x] Show upcoming Codeforces contests
-- [x] Show upcoming Hackerearth contests
-- [x] Add profile scrapers for Hackerrank
-- [x] Add profile scrapers for Codeforces
-- [x] Add profile scrapers for Hackerearth
-- [x] Show a user's rank in a currently running contest
-- [x] Integrate Google's Dialogflow to enable more organic conversations
-- [x] Add support for Capture The Flag competitions from [CTFTime](https://ctftime.org/)
+- [] Show upcoming Codeforces contests
+- [] Show upcoming Hackerearth contests
+- [] Add profile scrapers for Hackerrank
+- [] Add profile scrapers for Codeforces
+- [] Add profile scrapers for Hackerearth
+- [] Show a user's rank in a currently running contest
+- [] Integrate Google's Dialogflow to enable more organic conversations
+- [] Add support for Capture The Flag competitions from [CTFTime](https://ctftime.org/)
 
 ### Deployment
-- [x] Add a Heroku scheduler job to find and save the upcoming contests on regular basis
-- [x] Deploy the bot to a Digital Ocean VPS
+- [] Add a Heroku scheduler job to find and save the upcoming contests on regular basis
+- [] Deploy the bot to a Digital Ocean VPS
