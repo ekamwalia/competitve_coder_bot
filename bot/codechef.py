@@ -18,9 +18,9 @@ def codechef_contest() :
     contests_string = "PRESENT CONTESTS\n\n"
     for contest in present_contests :
         contest_details = contest.find_all("td")
-        contests_string += "Name: " + contest_details[1].text + "\n"
-        contests_string += "From: " + contest_details[2].text + "\n"
-        contests_string += "To: " + contest_details[3].text + "\n\n"
+        contests_string += "Name: {}\n".format(contest_details[1].text)
+        contests_string += "From: {}\n".format(contest_details[2].text)
+        contests_string += "To: {}\n\n".format(contest_details[3].text)
 
     future_contests_body = tables[1].find("tbody")
     future_contests = future_contests_body.find_all("tr")
@@ -28,9 +28,9 @@ def codechef_contest() :
     contests_string += "\nFUTURE CONTESTS\n\n"
     for contest in future_contests :
         contest_details = contest.find_all("td")
-        contests_string += "Name: " + contest_details[1].text + "\n"
-        contests_string += "From: " + contest_details[2].text + "\n"
-        contests_string += "To: " + contest_details[3].text + "\n\n"
+        contests_string += "Name: {}\n".format(contest_details[1].text)
+        contests_string += "From: {}\n".format(contest_details[2].text)
+        contests_string += "To: {}\n\n".format(contest_details[3].text)
 
     return contests_string
 
@@ -71,9 +71,6 @@ def codechef_user(username):
     user_profile += "\n"
     return user_profile
 
-
-if __name__ == "__main__":
-    print(codechef_user("ekamwalia7"))
 
 
 
