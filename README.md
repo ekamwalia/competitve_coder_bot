@@ -25,9 +25,9 @@ This section describes the commands and parameters to use various features of th
 This section contains all the ideas and features I am currently working on adding
 
 ### Functionality
-- [] Show upcoming Codeforces contests
-- [] Add profile scrapers for Hackerrank, Codeforces, Hackerearth
-- [] Integrate Google's Dialogflow to enable more organic conversations
+- [ ] Show upcoming Codeforces contests
+- [ ] Add profile scrapers for Hackerrank, Codeforces, Hackerearth
+- [ ] Integrate Google's Dialogflow to enable more organic conversations
 
 ### Deployment
 - [ ] Add a Heroku scheduler job to find and save the upcoming contests on regular basis
