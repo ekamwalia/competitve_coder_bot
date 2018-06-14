@@ -1,6 +1,6 @@
 # Competitive Coder Bot
 Telegram bot to stay updated with upcoming contests on competitive coding platforms like Codechef and Hackerrank.
-You can talk to the bot now at [t.me/compcoderbot](t.me/compcoderbot).
+You can talk to the bot now at [t.me/compcoderbot](https://t.me/compcoderbot).
 
 *Note:* This bot is deployed on Heroku and so it may take while (around 30s) to respond.
 
