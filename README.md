@@ -1,6 +1,6 @@
 # Competitive Coder Bot
 Telegram bot to stay updated with upcoming contests on competitive coding platforms like Codechef and Hackerrank.
-You can talk to the bot now at t.me/compcoderbot.
+You can talk to the bot now at (t.me/compcoderbot)[t.me/compcoderbot].
 
 *Note:* This bot is deployed on Heroku and so it may take while (around 30s) to respond.
 
@@ -17,19 +17,17 @@ This section describes the commands and parameters to use various features of th
 | hackerrank  |              | Present and upcoming Hackerrank contests |
 | codechef    | Username     | Codechef profile of the user             |
 | hackerrank  | Username     | Hackerrank profile of the current user   |
+| /ctftime    |              | All upcoming on-line CTFs from CTFTime   |
+| ctftime     |              | All upcoming on-line CTFs from CTFTime   |
 
 
 ## TODOS
 This section contains all the ideas and features I am currently working on adding
+
 ### Functionality
-- [ ] Show upcoming Codeforces contests
-- [ ] Show upcoming Hackerearth contests
-- [ ] Add profile scrapers for Hackerrank
-- [ ] Add profile scrapers for Codeforces
-- [ ] Add profile scrapers for Hackerearth
-- [ ] Show a user's rank in a currently running contest
-- [ ] Integrate Google's Dialogflow to enable more organic conversations
-- [ ] Add support for Capture The Flag competitions from [CTFTime](https://ctftime.org/)
+- [] Show upcoming Codeforces contests
+- [] Add profile scrapers for Hackerrank, Codeforces, Hackerearth
+- [] Integrate Google's Dialogflow to enable more organic conversations
 
 ### Deployment
 - [ ] Add a Heroku scheduler job to find and save the upcoming contests on regular basis
