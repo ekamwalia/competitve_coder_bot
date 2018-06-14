@@ -22,7 +22,7 @@ def ctftime_contest() :
         if event['onsite'] == True:
             continue
 
-        contests_string += "Name: {}\n".format(event['title'])
+        contests_string += "<b>Name:</b> {}\n".format(event['title'])
        
         time_meta = event['start']
         time_comp = parse(time_meta).isoformat(' ')
