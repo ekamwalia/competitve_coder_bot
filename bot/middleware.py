@@ -1,6 +1,6 @@
 from bot.codechef import *
 from bot.hackerrank import *
-
+from bot.ctftime import *
 
 def switch(message):
     arguments = message.split(' ')
@@ -20,8 +20,11 @@ def switch(message):
             response = codechef_user(arguments[1])
         elif command == 'hackerrank':
             response = hackerrank_user(arguments[1])
+        elif (command == 'ctftime' or command == '/ctftime') and arg_count == 1:
+            response = ctftime_contest()
         else:
             response = "Invalid command"
+    
     except:
         response = "An unknown error occured. Please try again later"
 
