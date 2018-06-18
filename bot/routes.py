@@ -26,3 +26,19 @@ def new_message_handler():
 @app.route("/")
 def hello():
     return "GET / works"
+
+@app.route("/forRabela")
+def something():
+    url = "https://prashanthrebala-parser.herokuapp.com/"
+    payload = {
+        "content": "Total: $500"
+    }
+
+    resp = requests.post(url, json=payload)
+
+    toret= {
+        "status" : resp.status_code,
+    }
+
+    return jsonify(toret)
+
