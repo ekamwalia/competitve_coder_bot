@@ -1,11 +1,12 @@
 from dateutil.parser import parse
 import json
-import urllib.request as req
+from urllib import request
+from urllib.request import Request, urlopen
 
-
-def ctftime_contest() :
+def ctftime_contest():
     ctftime_url = "https://ctftime.org/api/v1/events/?limit=15"
-    resp = req.urlopen(ctftime_url).read()
+    answ = Request(ctftime_url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"})
+    resp = urlopen(answ).read()
 
     # Decode response json into utf8 then load
     # into a dictionary using json module 
